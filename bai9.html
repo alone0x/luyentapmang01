@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input id="id"><br>
+<button id="button" onclick="nhapmang()" style="position: absolute; left: 300px;top: 2px">nhập mảng 1</button>
+<input id="id2"><br>
+<button onclick="nhap2()" style="position:absolute; left: 300px ;top: 28px">nhập mảng 2</button>
+<p id="id3"></p><br>
+<p id="id4"></p><br>
+
+<p id="id6"></p><br>
+<p id="id5"></p>
+<button onclick="noi()" style="position:absolute; left: 300px ;top: 200px">nối 2 mảng</button>
+
+<script>
+    let mang = new Array();
+    let mang2 = [];
+    let mang3 = [];
+
+
+    function nhapmang() {
+        a = parseInt(document.getElementById("id").value);
+        console.log(a);
+        mang.push(a);
+        console.log(mang);
+        document.getElementById("id3").innerHTML = "số phần tử trong mảng là :" + mang.length;
+    }
+
+    function nhap2() {
+        b = parseInt(document.getElementById("id2").value);
+        document.getElementById("id6").innerHTML = "số phần tử trong mảng là :" + mang2.length;
+        mang2.push(b);
+        console.log(mang2);
+    }
+
+    function noi() {
+        mang3 = mang.concat(mang2);
+        console.log(mang3);
+        document.getElementById("id5").innerHTML = mang3;
+
+    }
+</script>
+</body>
+</html>

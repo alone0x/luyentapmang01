@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang = [4, 5, 4, 7, 8, 6, 3, 1, 2, 5, 8];
+    mang2 = [];
+    max = 0;
+    while (mang.length !== 0) {
+        for (i = 0; i <= mang.length;i++) {
+            if (mang[i] > max){
+                max = mang[i];
+                mang2.push(max);
+                mang.splice(i,1);
+            }
+                }
+    }
+    document.write(mang2);
+</script>
+</body>
+</html>

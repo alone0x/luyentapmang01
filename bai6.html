@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input id="id"><br>
+<button id="button" onclick="nhapmang()" style="position: absolute; left: 300px;top: 2px">nhập mảng</button>
+<input id="id2"><br>
+<button onclick="test()" style="position:absolute; left: 300px ;top: 28px">kiểm tra</button>
+<p id="id3"></p><br>
+<p id="id4"></p>
+<script>
+    let mang = new Array();
+    let a;
+
+    function nhapmang() {
+        a = parseInt(document.getElementById("id").value);
+        console.log(a);
+        mang.push(a);
+        console.log(mang);
+        document.getElementById("id3").innerHTML = "số phần tử trong mảng là :" + mang.length;
+    }
+
+    function test() {
+        b = parseInt(document.getElementById("id2").value);
+
+
+        for (j = 0; j < mang.length; j++) {
+            if (b === mang[j]) {console.log(b);
+
+                document.getElementById("id4").innerHTML="số này có trong mảng ";
+                break;
+
+            } else {
+                document.getElementById("id4").innerHTML="số này không có trong mảng ";
+                break;
+            }
+
+        }
+    }
+
+
+</script>
+</body>
+</html>

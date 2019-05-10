@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang = [1,5,6,7,5,2,1,4,5,8,2,1];
+    let max = mang[0];
+    let x ;
+    for (i = 0; i < mang.length; i++) {
+        if (mang[i] > max) {
+            max = mang[i];
+            x = i;
+        }
+    }
+    document.write(max + " là số lớn nhất " + " ở vị trí thứ " + (x - 1));
+</script>
+</body>
+</html>
